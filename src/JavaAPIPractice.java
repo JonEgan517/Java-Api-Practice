@@ -3,17 +3,18 @@ public class JavaAPIPractice
 {
 	public static void main(String[] args) 
 	{
-		String phrase = "You are cooler";
-		printFirstThree(phrase);
-		printMiddleWord(phrase);
-		printLength(phrase);
-		firstE(phrase);
-		lastE(phrase);
-		//addSecondPhrase();
-		//replaceEToX();
-		//upperCase();
-		//getRidOfSpaces();
-		//lexicographically();
+		String phraseOne = "You are cooler,";
+		String phraseTwo = " but I am smarter.";
+		printFirstThree(phraseOne);
+		printMiddleWord(phraseOne);
+		printLength(phraseOne);
+		firstE(phraseOne);
+		lastE(phraseOne);
+		addSecondPhrase(phraseOne, phraseTwo);
+		replaceEToX(phraseOne, phraseTwo);
+		upperCase(phraseTwo);
+		getRidOfSpaces(phraseTwo);
+		lexicographically(phraseOne, phraseTwo);
 	}
 
 		private static void printFirstThree(String letters) 
@@ -49,29 +50,29 @@ public class JavaAPIPractice
 			System.out.println(letterE.lastIndexOf('e')+1);
 		}
 
-		private static void addSecondPhrase()
+		private static void addSecondPhrase(String first, String second)
 		{
-			
+			System.out.println(first.concat(second));
 		}
 		
-		private static void replaceEToX() 
+		private static void replaceEToX(String first, String second) 
 		{
-		
-		}
-
-		private static void upperCase() 
-		{
-		
+			System.out.println(first.replace("e", "x") + second.replace("e", "x"));
 		}
 
-		private static void getRidOfSpaces() 
+		private static void upperCase(String second) 
 		{
-		
+			System.out.println(second.toUpperCase());
 		}
 
-		private static void lexicographically() 
+		private static void getRidOfSpaces(String second) 
 		{
-		
+			System.out.println(second.replace(" ", ""));
+		}
+
+		private static void lexicographically(String first, String second) 
+		{
+			System.out.println(first.compareTo(second));
 		}
 	
 }
